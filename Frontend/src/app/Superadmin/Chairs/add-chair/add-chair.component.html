@@ -1,0 +1,18 @@
+
+<h3>Create new chair</h3>
+<br>
+Select chair model:
+<select [(ngModel)]="chairModelId" style="width: 100px">
+  <option *ngFor="let m of models" [value]="m.id">{{m.name}}</option>
+</select>
+<button [disabled]="chairModelId==0" (click)="addNewChair()" style="margin-left: 10px">
+  Add new chair
+</button>
+<hr width="400">
+<div *ngIf="newChair">
+  <label>Id:</label>
+  <span>{{newChairId}}</span>
+  <br>
+  <label>Serial number:</label>
+  <span>{{newChairSerialNumber}}</span>
+</div>

@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PlatformTarget>x64</PlatformTarget>
+    <UserSecretsId>9f31d906-c37f-4125-b4d9-3885a4f74c40</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="MailKit" Version="4.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ML" Version="1.7.1" />
+    <PackageReference Include="Microsoft.ML.FastTree" Version="1.7.1" />
+    <PackageReference Include="Microsoft.ML.LightGbm" Version="1.7.1" />
+    <PackageReference Include="OpenAI" Version="1.10.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Endpoints\AuthEndpoints\AccountInfo\Edit\" />
+    <Folder Include="Models\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpineWise.ClassLibrary\SpineWise.ClassLibrary.csproj" />
+  </ItemGroup>
+  <ItemGroup Label="MLModelspine">
+    <None Include="MLModelspine.consumption.cs">
+      <DependentUpon>MLModelspine.mbconfig</DependentUpon>
+    </None>
+    <None Include="MLModelspine.training.cs">
+      <DependentUpon>MLModelspine.mbconfig</DependentUpon>
+    </None>
+    <None Include="MLModelspine.zip">
+      <DependentUpon>MLModelspine.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

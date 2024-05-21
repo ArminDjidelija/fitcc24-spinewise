@@ -1,0 +1,49 @@
+<div *ngIf="stolica.id>0" class="row col-lg-9">
+  <table class="table ">
+    <thead>
+    <tr>
+      <th scope="col">Serial number</th>
+      <th scope="col">Date of creating</th>
+      <th scope="col">Name</th>
+      <th scope="col">Delay</th>
+      <th scope="col">Send data?</th>
+      <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row">{{stolica.serialNumber}}</th>
+      <td>{{stolica.dateOfCreating | date}} </td>
+
+      <td *ngIf="!editovanje">{{stolica.naziv}}</td>
+      <td *ngIf="!editovanje">{{stolica.delay}}</td>
+      <td *ngIf="!editovanje"><input type="checkbox" [checked]="stolica.saljiPodatke"></td>
+
+      <td *ngIf="editovanje">
+        <input type="text" [(ngModel)]="editovanaStolica.naziv">
+      </td>
+      <td *ngIf="editovanje">
+        <input type="number" [(ngModel)]="editovanaStolica.delay" min="10" max="60">
+      </td>
+      <td *ngIf="editovanje">
+        <input type="checkbox" [(ngModel)]="editovanaStolica.saljiPodatke">
+      </td>
+      <td *ngIf="!editovanje">
+        <button class="btn btn-primary" (click)="setEditovanje()">Edit</button>
+      </td>
+      <td *ngIf="editovanje">
+        <button class="btn btn-primary" (click)="editujStolicu()">Spasi</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="stolica.id==0">
+  <h3>Add chair:</h3>
+  <br>
+  <label style="margin-right: 10px">Enter chair serial number: </label>
+  <input type="text" [(ngModel)]="serialNumber">
+  <button (click)="setUserChair()" style="margin-left: 10px">Add chair</button>
+</div>
+

@@ -1,0 +1,147 @@
+.chart{
+  height: 300px;
+  width: 100%;
+}
+canvas{
+  width:100%;
+}
+/*@media (max-width: 1250px) {*/
+/*  .chart{*/
+/*    height: 300px;*/
+
+/*    width: 400px;*/
+/*  }*/
+/*}*/
+
+/*@media (max-width: 1000px) {*/
+/*  .chart{*/
+/*    height: 300px;*/
+
+/*    width: 400px;*/
+/*  }*/
+/*}*/
+
+/*@media (max-width: 768px) {*/
+/*  .chart{*/
+/*    width: 100%;*/
+/*  }*/
+/*}*/
+
+.red{
+  background-color: red;
+
+}
+
+.white{
+  color: white;
+}
+
+
+.container {
+  display: flex;
+}
+
+.left-div {
+  width: 100px;
+  height: 250px;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.middle-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.middle-div {
+  width: 150px;
+  height: 125px;
+  background-color: lightgreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border:1px solid red;
+}
+
+.right-div {
+  width: 100px;
+  height: 250px;
+  background-color: lightcoral;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/*.heatmap {*/
+/*}*/
+
+/*.prvi, .peti, .sredina {*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  text-align: center;*/
+/*  color: white;*/
+/*  font-weight: bold;*/
+/*}*/
+
+/*.prvi {*/
+/*  height: 300px;*/
+/*  width: 100px;*/
+/*  background-color: rgb(155, 0, 0);*/
+/*  display: inline-block;*/
+/*  vertical-align: top;*/
+/*}*/
+
+/*.peti {*/
+/*  height: 300px;*/
+/*  width: 100px;*/
+/*  background-color: rgb(155, 0, 0);*/
+/*  display: inline-block;*/
+/*  vertical-align: top;*/
+/*}*/
+
+/*.sredinaDiv {*/
+/*  display: inline-block;*/
+/*  vertical-align: top;*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+/*.sredina {*/
+/*  height: 100px;*/
+/*  width: 200px;*/
+/*  background-color: rgb(160, 0, 0);*/
+/*}*/
+/*.krajnji{*/
+/*  margin-top: 50%;*/
+/*}*/
+
+
+/*.prvi{*/
+/*  height: 300px;*/
+/*  width:100px;*/
+/*  background-color: rgb(255, 0, 0);*/
+/*  display: inline-block;*/
+/*}*/
+/*.peti{*/
+/*  height: 300px;*/
+/*  width:100px;*/
+/*  background-color: rgb(200, 0, 0);*/
+/*  display: inline-block;*/
+/*  box-sizing: border-box;*/
+
+/*}*/
+/*.sredinaDiv{*/
+/*  display: inline-block;*/
+/*  box-sizing: border-box;*/
+/*}*/
+/*.sredina{*/
+/*  height: 100px;*/
+/*  width: 200px;*/
+/*  background-color: rgb(160, 0, 0);*/
+/*}*/

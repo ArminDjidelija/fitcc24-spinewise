@@ -397,7 +397,4 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-appsettings.json
 /.angular/cache/
-deps/
-Frontend/dist/frontend/

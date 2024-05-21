@@ -1,0 +1,19 @@
+<div *ngIf="!promjenaLozinke" style="width: 300px;">
+  <h2>Information about profile</h2>
+  <input class="inputUser" type="text" [(ngModel)]="firstname">
+  <br>
+  <input class="inputUser" type="text" [(ngModel)]="lastname">
+  <br>
+  <a (click)="promjenaLozinke=true">Izmjena lozinke</a>
+  <br>
+  <button style="float: right;" class="btn btn-primary" (click)="updateUser()">Sačuvaj</button>
+</div>
+<div *ngIf="promjenaLozinke">
+  <input class="inputUser" type="password" [(ngModel)]="pass" placeholder="Stara lozinka">
+  <br>
+  <input class="inputUser" type="password" [(ngModel)]="newPass" placeholder="Nova lozinka">
+  <br>
+  <input class="inputUser" type="password" [(ngModel)]="confPass" placeholder="Potvrda nove lozinke">
+  <br>
+  <button class="btn btn-primary" (click)="updateUser()">Promijeni lozinku</button>
+</div>

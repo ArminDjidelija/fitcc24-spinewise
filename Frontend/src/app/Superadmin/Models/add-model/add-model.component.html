@@ -1,0 +1,10 @@
+<h2>Create new chair model:</h2>
+<div style="margin-bottom: 10px">
+  <label style="margin-right: 10px">Name:</label>
+  <input type="text" [(ngModel)]="name">
+</div>
+<label style="margin-right: 5px">Date of creating model:</label>
+<input type="date" [(ngModel)]="dateOfCreating">
+<button (click)="addNewChair()"  style="margin-left: 10px">
+  Add new model
+</button>

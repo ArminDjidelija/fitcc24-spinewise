@@ -1,0 +1,26 @@
+<!--<p>review-chair works!</p>-->
+<div class="row col-lg-9">
+  <table class="table ">
+    <thead>
+    <tr>
+      <th scope="col">Serial number</th>
+      <th scope="col">Date of creating</th>
+      <th scope="col">Chair model</th>
+      <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let s of chairs">
+      <th scope="row">{{s.serialNumber}}</th>
+      <td>{{s.dateOfCreating | date}} </td>
+      <td>{{s.chairModel.name}} </td>
+      <td>
+        <button class="me-1">Edit</button>
+        <button (click)="deleteChair(s.id)">Delete</button>
+
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>

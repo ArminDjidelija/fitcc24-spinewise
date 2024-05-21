@@ -1,0 +1,80 @@
+<div style="margin-bottom: 60px;height: 100px;width: 100%;text-align: center;font-size: xx-large; display: flex;
+   margin: auto;" *ngIf="warningShow" [ngClass]="{'red':isred}">Wrong posture, {{procenatLast5}}% of time in last minute your posture was in unhealthy position</div>
+
+<p >
+  {{aiResponse}}
+</p>
+
+<div class="row">
+  <div class="col-lg-3">
+    <div >Datum: {{sjedenje.datum | date}}</div>
+    <div >
+      Vrijeme sjedenja: {{sjedenje.sittingHours}} sati i {{sjedenje.sittingMinutes}} minuta
+    </div>
+    <div >Ispravan procenat sjedenja: {{sjedenje.goodPercentage}}%</div>
+    <div>
+      <input type="date" (change)="ChairHeatmap();ChairSittingData();GetDayDistribution();" name="" id="" [(ngModel)]="heatMapDate">
+    </div>
+  </div>
+  <div class="col-lg-9">
+<!--    <h5>Raspodjela sjedenja po danu:</h5>-->
+    <div class="chart">
+      <canvas id="dan"></canvas>
+    </div>
+    <div class="chart">
+      <canvas id="wrongposture"></canvas>
+    </div>
+  </div>
+<!--  <div class="col-lg-4"></div>-->
+<!--  <div class="col-lg-4"></div>-->
+</div>
+<hr>
+<div class="row">
+
+  <div class="col-lg-6">
+    <h5>Vrijeme sjedenja zadnjih 5 zabilježenih dana:</h5>
+    <div class="chart">
+      <canvas id="vrijeme"></canvas>
+    </div>
+  </div>
+<!--  <div class="col-lg-6">-->
+<!--    <h5>Odnos dobrog i lošeg sjedenja:</h5>-->
+<!--    <div class="chart">-->
+<!--      <canvas id="goodbad"></canvas>-->
+<!--    </div>-->
+<!--  </div>-->
+</div>
+
+<div class="chart">
+  <canvas id="piechart"></canvas>
+</div>
+
+
+<div>
+  <p [(ngModel)]="heatMapObject"></p>
+</div>
+
+<!--<div class="heatmap">-->
+<!--  Heatmap sjedenja:-->
+<!--  <br>-->
+<!--  <div #prvi class="prvi">{{777}}</div>-->
+<!--  <div class="sredinaDiv">-->
+<!--    <div #drugi class="sredina">{{sjedenje.s1Percentage}}%</div>-->
+<!--    <div #treci class="sredina">{{sjedenje.s2Percentage}}%</div>-->
+<!--    <div #cetvrti class="sredina">{{sjedenje.s3Percentage}}%</div>-->
+<!--  </div>-->
+<!--  <div #peti class="peti">{{777}}</div>-->
+<!--</div>-->
+
+<div class="container">
+  <div #prvi class="left-div">{{sjedenje.s3Percentage}}%</div>
+  <div class="middle-container">
+    <div #drugi class="middle-div">{{sjedenje.s1Percentage}}%</div>
+    <div #treci class="middle-div">{{sjedenje.s2Percentage}}%</div>
+  </div>
+  <div #cetvrti class="right-div">{{sjedenje.s3Percentage}}%</div>
+</div>
+
+<!--<div class="chart">-->
+<!--  <canvas id="goodbad"></canvas>-->
+<!--</div>-->

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title></title>
+
+  <!-- Bootstrap CSS CDN -->
+  <!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
+  <!-- Our Custom CSS -->
+  <!--  <link rel="stylesheet" href="style4.css">-->
+
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+
+<div class="wrapper">
+
+  <div id="content" style="padding: 0;">
+
+    <div class="navbar-and-hero" style="background-image: url('https://svgshare.com/i/15zh.svg'); background-size: cover;">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+
+<!--        <button type="button" id="sidebarCollapse" class="btn btn-info">-->
+<!--          <i class="fa fa-align-left"></i>-->
+<!--          <span></span>-->
+<!--        </button>-->
+
+        <div class="sidebar-header" style="background-color: transparent;">
+          <a routerLink="" style="color: #3e96cb">
+            <div class="logo"><img src="assets/logo/logosupported.svg"></div>
+          </a>
+<!--          <a routerLink="">-->
+<!--            <strong>SW</strong>-->
+<!--          </a>-->
+        </div>
+
+
+        <button style="background-color: #3e96cb" class="btn  d-inline-block d-lg-none ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-align-justify"></i>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: transparent;">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#howitworks">How it works</a></li>
+            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+            <li class="nav-item">
+              <a class="nav-link download-link" href="/SpineWise_User_Manual.pdf" download>User Manual </a>
+            </li>
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" href="">Test2</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" href="">Test3</a>-->
+<!--            </li>-->
+            <li *ngIf="!role" class="nav-item">
+              <a class="nav-link" routerLink="/login">
+                <button class="signinbtn" style="background-color: #2D4E6E;color: white;border-radius: 15px;border: 0px;padding-bottom: 3px;padding-left: 15px;padding-right: 15px">
+                  Sign in
+                </button>
+              </a>
+            </li>
+            <li *ngIf="role" class="nav-item">
+              <a class="nav-link" (click)="forward()">
+                <button style="background-color: #3e96cb;color: white;border-radius: 15px;border: 0px;padding-bottom: 3px;padding-left: 10px;padding-right: 10px">
+                  My profile
+                </button>
+              </a>
+            </li>
+            <!--            <li class="nav-item">-->
+            <!--              <a class="nav-link" href="#">Page</a>-->
+            <!--            </li>-->
+          </ul>
+        </div>
+
+
+
+
+      </div>
+    </nav>
+
+
+
+    <div class="hero-section" >
+      <div class="herowrapper" >
+        <div class="hero-text-wrapper">
+        <div class="hero-main-text">
+        <h2>Sit smarter, Live healthier.</h2>
+        </div>
+         <div class="hero-subheading"><h4>Discover the innovative seating solution.</h4></div>
+         <div class="primary-btn" ><a href="#howitworks">Learn more</a></div>
+         <div class="secondary-btn" routerLink="/login">Sign in</div>
+        </div>
+
+        <div class="image-wrapper">
+          <img src="assets/hero-image/chair.png" style="width: 80%;">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+  <div class="howsection" id="howitworks">
+    <div class="howheader"><h2>How does <i>SpineWise</i> work? </h2></div>
+
+    <div class="stepswrapper">
+      <div class="step">
+          <div class="number">
+            <img src="/assets/stepssection/1.svg">
+          </div>
+          <div class="step-header"><h4>Get Comfortable</h4></div>
+          <div class="step-subheading"><p>Start by settling into the smart chair comfortably, ensuring your back is supported and your feet are flat on the floor.</p></div>
+      </div>
+
+      <div class="step">
+        <div class="number">
+          <img class="imgnum" src="/assets/stepssection/2.svg">
+        </div>
+        <div class="step-header"><h4>Connect your Chair</h4></div>
+        <div class="step-subheading"><p>Use your mobile or PC to connect the smart chair to the <i>SpineWise</i> web app.
+        </p></div>
+    </div>
+
+    <div class="step">
+      <div class="number">
+        <img src="/assets/stepssection/3.svg">
+      </div>
+      <div class="step-header"><h4>Stay Mindful</h4></div>
+      <div class="step-subheading"><p>As you sit, pay attention to any feedback from the chair via the web app to adjust your sitting position accordingly</p></div>
+  </div>
+    </div>
+
+    <div class="download-subheading"><p> Download our <a class="downloadusermanual">User Manual</a> to learn more about <i>SpineWise!</i></p></div>
+  </div>
+
+  <div class="features-section" id="features">
+    <div class="features-heading"><h2>Features</h2></div>
+    <div class="features-subheading"><p>Explore the innovative functionalities designed to enhance your posture, comfort, and overall spinal health with the <i>Spinewise</i> Smart Chair.</p></div>
+
+    <div class="features-wrapper">
+
+      <div class="column leftcolumn">
+      <div class="feature">
+        <div class="icon-heading">
+          <div class="icon">
+            <img class="iconsvg" src="assets/features/chair.svg">
+          </div>
+          <div class="feature-heading ergonomic">
+            <h3>Ergonomic Design</h3>
+          </div>
+        </div>
+          <div class="feature-desc"><p>Contoured seat and backrest provide optimal support to maintain proper spinal alignment promoting good posture.</p></div>
+      </div>
+
+      <div class="feature">
+        <div class="icon-heading">
+          <div class="icon">
+            <img src="assets/features/feedback.svg">
+          </div>
+          <div class="feature-heading">
+            <h3>Real-time Feedback</h3>
+          </div>
+        </div>
+          <div class="feature-desc"><p> Integrated sensors and AI algorithms detect posture deviations and provide instant feedback, encouraging users to correct their posture.</p></div>
+      </div>
+
+      <div class="feature">
+        <div class="icon-heading">
+          <div class="icon">
+            <img src="assets/features/analysis.svg">
+          </div>
+          <div class="feature-heading">
+            <h3>Detailed Analysis</h3>
+          </div>
+        </div>
+          <div class="feature-desc"><p>The chair's AI compiles detailed analytics of the user's previous sitting habits, including duration, frequency, and posture variations.</p></div>
+      </div>
+
+    </div>
+
+    <div class="column">
+
+      <div class="feature">
+        <div class="icon-heading">
+          <div class="icon">
+            <img src="assets/features/analytics.svg">
+          </div>
+          <div class="feature-heading">
+            <h3>Predictive Analytics</h3>
+          </div>
+        </div>
+          <div class="feature-desc"><p>By analyzing historical sitting data, <i>SpineWise</i> predicts potential posture-related issues and provides recommendations to prevent discomfort.</p></div>
+      </div>
+
+      <div class="feature">
+        <div class="icon-heading">
+          <div class="icon">
+            <img src="assets/features/profile.svg">
+          </div>
+          <div class="feature-heading">
+            <h3>User Profile Customization</h3>
+          </div>
+        </div>
+          <div class="feature-desc"><p>Based on the user's input regarding spinal health and body dimensions, a user profile is created adjusting optimal settings.</p></div>
+      </div>
+
+      <div class="feature">
+        <div class="icon-heading">
+          <div class="icon">
+            <img src="assets/features/adjust.svg">
+          </div>
+          <div class="feature-heading ergonomic">
+            <h3>Adjustable Features</h3>
+          </div>
+        </div>
+          <div class="feature-desc"><p>To accommodate various body types and preferences, <i>SpineWise</i> is equipped with a range of adjustable features.</p></div>
+      </div>
+
+    </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="feedback">
+    <div class="feedback-wrapper">
+      <div class="quotation"><img src="assets/feedback/quotation1.svg"></div>
+      <div class="feedback-text">
+        <p><i>This solution interestingly combines traditional industries with complex <br> and high-tech industries and areas.</i></p>
+      </div>
+      <div class="author-wrapper">
+      <div class="author"><h5>Zsolt Bubori</h5></div>
+      <div class="role">Ecosystem Lead at EIT Health</div>
+       </div>
+
+       <div class="quotation2"><img src="assets/feedback/quotation2.svg"></div>
+    </div>
+
+  </div>
+
+  <div class="joinus-section">
+    <div class="joinwrapper">
+      <div class="text-and-button">
+        <h2>
+          Experience a Pain-Free Back with SpineWise.
+        </h2>
+        <div class="proceedbtn">
+          Proceed to App
+        </div>
+      </div>
+      <div class="image-join">
+        <img  src="assets/join-us/joinusback.png">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+      <div class="footer-content">
+        <div class="logo-footer">
+          <img src="assets/logo/logosupported.svg">
+        </div>
+        <div class="links">
+          <ul class="links-list">
+            <li><a>Home</a></li>
+            <li><a>Features</a></li>
+            <li><a>User Manual</a></li>
+            <li><a href="/login">Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+
+  </div>
+
+    <router-outlet>    </router-outlet>
+
+  </div>
+
+
+
+<!--  <button routerLink="/user">Redirekcija na user panel</button> radi-->
+<!--  <br>-->
+<!--  <button routerLink="/s-admin">Redirekcija na admin</button> radi-->
+<!--  <br>-->
+
+<!--  <button routerLink="/login">Redirekcija na login</button> radi login-->
+<!--  <br>-->
+<!--  <button routerLink="/register">Redirekcija na register</button> ne radi još-->
+
+</div>
+
+
+
+</body>
+</html>

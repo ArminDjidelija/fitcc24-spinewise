@@ -1,0 +1,9 @@
+.inputUser{
+  margin:5px;
+  width: 300px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+a:hover{
+  cursor: pointer;
+}

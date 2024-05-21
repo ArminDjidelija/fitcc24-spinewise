@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+<div class="container">
+  <div class="forms-container">
+    <div class="signin-signup">
+      <form action="#" class="sign-in-form">
+        <h2 class="title">Sign in</h2>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Email" />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" />
+        </div>
+        <input type="submit" value="Login" class="btn solid" />
+        <p class="social-text">Enter your correct e-mail and password</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="panels-container">
+    <div class="panel left-panel">
+      <div class="content">
+        <h3>Welcome to SpineWise</h3>
+        <p>
+          Spinewise helps with monitoring your spine health.
+        </p>
+
+      </div>
+      <img src="img/logosupported.svg" class="image" alt="" />
+    </div>
+  </div>
+</div>
+
+<!--<script src="app.js"></script>-->
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--  <meta http-equiv="content-type" content="text/html; charset=UTF-8">-->
+<!--  <title>Bootstrap Register Page</title>-->
+<!--  <meta http-equiv="content-type" content="text/html; charset=UTF-8">-->
+<!--  <meta name="robots" content="noindex, nofollow">-->
+<!--  <meta name="googlebot" content="noindex, nofollow">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+
+
+<!--&lt;!&ndash;  <script&ndash;&gt;-->
+<!--&lt;!&ndash;    type="text/javascript"&ndash;&gt;-->
+<!--&lt;!&ndash;    src="/js/lib/dummy.js"&ndash;&gt;-->
+
+<!--&lt;!&ndash;  ></script>&ndash;&gt;-->
+
+<!--&lt;!&ndash;  <link rel="stylesheet" type="text/css" href="/css/result-light.css">&ndash;&gt;-->
+
+<!--  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">-->
+<!--  <script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.slim.min.js"></script>-->
+<!--  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>-->
+<!--  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash; Navbar&ndash;&gt;-->
+<!--&lt;!&ndash;<header class="header">&ndash;&gt;-->
+<!--&lt;!&ndash;  <nav class="navbar navbar-expand-lg navbar-light py-3">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;      &lt;!&ndash; Navbar Brand &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;      <a href="#" class="navbar-brand">&ndash;&gt;-->
+<!--&lt;!&ndash;        <img src="https://bootstrapious.com/i/snippets/sn-registeration/logo.svg" alt="logo" width="150">&ndash;&gt;-->
+<!--&lt;!&ndash;      </a>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  </nav>&ndash;&gt;-->
+<!--&lt;!&ndash;</header>&ndash;&gt;-->
+
+
+<!--<div class="container mt-5">-->
+<!--  <div class="row py-5 mt-0 align-items-center">-->
+<!--    &lt;!&ndash; For Demo Purpose &ndash;&gt;-->
+<!--    <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">-->
+<!--      <img src="assets/logo/logo.png"  alt="" class="img-fluid mb-3 d-none d-md-block">-->
+<!--      <h1>Sign in</h1>-->
+<!--      <p class="font-italic text-muted mb-0">Spinewise helps with monitoring your spine health</p>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Registration Form &ndash;&gt;-->
+<!--    <div class="col-md-7 col-lg-6 ml-auto">-->
+<!--      <form action="#">-->
+<!--        <div class="row">-->
+
+
+<!--          &lt;!&ndash; Email Address &ndash;&gt;-->
+<!--          <div class="input-group col-lg-8 mb-4">-->
+<!--            <div class="input-group-prepend">-->
+<!--                            <span class="input-group-text bg-white px-4 border-md border-right-0">-->
+<!--                                <i class="fa fa-envelope text-muted"></i>-->
+<!--                            </span>-->
+<!--            </div>-->
+<!--            <input [(ngModel)]="email" id="email" type="email" name="email" placeholder="Email address" class="form-control bg-white border-left-0 border-md">-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Password &ndash;&gt;-->
+<!--          <div class="input-group col-lg-8 mb-4">-->
+<!--            <div class="input-group-prepend">-->
+<!--                            <span class="input-group-text bg-white px-4 border-md border-right-0">-->
+<!--                                <i class="fa fa-lock text-muted"></i>-->
+<!--                            </span>-->
+<!--            </div>-->
+<!--            <input (keyup.enter)="onEnter($event)" [(ngModel)]="password" id="password" type="password" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md">-->
+<!--          </div>-->
+
+
+
+<!--          &lt;!&ndash; Submit Button &ndash;&gt;-->
+<!--          <div class="form-group col-lg-8 mb-0">-->
+<!--            <a (click)="signIn()" class="btn btn-primary btn-block py-2">-->
+<!--              <span class="font-weight-bold">Sign in</span>-->
+<!--            </a>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Divider Text &ndash;&gt;-->
+
+<!--        </div>-->
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!--<script type="text/javascript">//<![CDATA[-->
+
+
+<!--// For Demo Purpose [Changing input group text on focus]-->
+<!--$(function () {-->
+<!--  $('input, select').on('focus', function () {-->
+<!--    $(this).parent().find('.input-group-text').css('border-color', '#80bdff');-->
+<!--  });-->
+<!--  $('input, select').on('blur', function () {-->
+<!--    $(this).parent().find('.input-group-text').css('border-color', '#ced4da');-->
+<!--  });-->
+<!--});-->
+
+
+
+<!--//]]></script>-->
+
+<!--<script>-->
+<!--  // tell the embed parent frame the height of the content-->
+<!--  if (window.parent && window.parent.parent){-->
+<!--    window.parent.parent.postMessage(["resultsFrame", {-->
+<!--      height: document.body.getBoundingClientRect().height,-->
+<!--      slug: "3j4a0Lps"-->
+<!--    }], "*")-->
+<!--  }-->
+
+<!--  // always overwrite window.name, in case users try to set it manually-->
+<!--  window.name = "result"-->
+<!--</script>-->
+
+
+<!--</body>-->
+<!--</html>-->

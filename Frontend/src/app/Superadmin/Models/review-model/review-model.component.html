@@ -1,0 +1,23 @@
+<div class="row col-lg-9">
+  <table class="table ">
+    <thead>
+    <tr>
+      <th scope="col">Name of model</th>
+      <th scope="col">Date of creating</th>
+      <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let s of stolice">
+      <th scope="row">{{s.name}}</th>
+      <td>{{s.dateOfCreating | date}} </td>
+
+      <td>
+<!--        <button class="me-1">Edit</button>-->
+        <button (click)="deleteChair(s.id)">Delete</button>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
