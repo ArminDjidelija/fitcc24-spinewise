@@ -46,6 +46,7 @@ namespace SpineWise.Web.Endpoints.SpinePostureDataLog.Add
                 PressureSensor1 = request.PressureSensor1,
                 PressureSensor2 = request.PressureSensor2,
                 PressureSensor3 = request.PressureSensor3,
+                PressureSensor4 = request.PressureSensor4,
                 ChairId = request.ChairId,
                 DateTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow,
                     TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time")),
