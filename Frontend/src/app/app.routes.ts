@@ -27,6 +27,7 @@ export const routes: Routes = [
       {path:'profile', component:UserProfileComponent},
       {path:'panel', component:UserWelcomeComponent},
     ]},
+  {path:'user', redirectTo:'user/dashboard'},
   {path:'admin-panel', component:AdminPanelComponent, canActivate:[authGuardAdmin]},
   {path:'s-admin', component:SuperAdminPanelComponent, canActivate:[authGuardSuperAdmin], children:[
       {path: 'add-chair', component: AddChairComponent},

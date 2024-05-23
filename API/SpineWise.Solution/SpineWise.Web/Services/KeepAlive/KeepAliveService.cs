@@ -16,8 +16,8 @@ namespace SpineWise.Web.Services.KeepAlive
         {
             try
             {
-                WebRequest req = WebRequest.Create("https://backend.p2307.app.fit.ba/proizvodPopusti?Page=1&TableSize=4&SortID=2");
-                //WebRequest req = WebRequest.Create("https://backend.spinewise.p2361.app.fit.ba/sensorlogs/count");
+                //WebRequest req = WebRequest.Create("https://backend.p2307.app.fit.ba/proizvodPopusti?Page=1&TableSize=4&SortID=2");
+                WebRequest req = WebRequest.Create("https://backend.spinewise.p2361.app.fit.ba/sensorlogs/getall");
                 req.GetResponse();
             }
             catch (Exception ex)

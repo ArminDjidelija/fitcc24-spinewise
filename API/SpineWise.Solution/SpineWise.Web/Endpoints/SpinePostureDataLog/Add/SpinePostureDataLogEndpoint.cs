@@ -29,15 +29,16 @@ namespace SpineWise.Web.Endpoints.SpinePostureDataLog.Add
             {
                 return BadRequest("Wrong key");
             }
-            var DatumVrijeme = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow,
-                TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"));
+            //var DatumVrijeme = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow,
+            //    TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"));
 
-            var tool = new AiPredictor();
-            var good = await tool.GetPredictionAsync(request.UpperBackDistance, request.LegDistance,
-                (request.PressureSensor1 ? 1.0f : 0.0f),
-                (request.PressureSensor2 ? 1.0f : 0.0f),
-                (request.PressureSensor3 ? 1.0f : 0.0f)
-            );
+            //var tool = new AiPredictor();
+
+            //var good = await tool.GetPredictionAsync(request.UpperBackDistance, request.LegDistance,
+            //    (request.PressureSensor1 ? 1.0f : 0.0f),
+            //    (request.PressureSensor2 ? 1.0f : 0.0f),
+            //    (request.PressureSensor3 ? 1.0f : 0.0f)
+            //);
 
             var obj = new ClassLibrary.Models.SpinePostureDataLog()
             {
@@ -47,10 +48,11 @@ namespace SpineWise.Web.Endpoints.SpinePostureDataLog.Add
                 PressureSensor2 = request.PressureSensor2,
                 PressureSensor3 = request.PressureSensor3,
                 PressureSensor4 = request.PressureSensor4,
+                DateTime=DateTime.Now,
                 ChairId = request.ChairId,
-                DateTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow,
-                    TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time")),
-                Good = good
+                //DateTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow,
+                //    TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time")),
+                Good = request.Good
             };
 
             _applicationDbContext.SpinePostureDataLogs.Add(obj);

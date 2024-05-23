@@ -10,5 +10,6 @@
         public bool PressureSensor4 { get; set; }
         public int ChairId { get; set; }
         public string? Key { get; set; }
+        public bool Good { get; set; }
     }
 }

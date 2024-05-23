@@ -23,8 +23,8 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
     {
-        builder.WithOrigins("http://localhost:4200")
-        .WithOrigins("https://localhost:7210")
+        builder
+            .WithOrigins(new string[] { "https://spinewise.p2361.app.fit.ba", "https://backend.spinewise.p2361.app.fit.ba" })
             .AllowAnyMethod()
             .AllowAnyHeader()
             .AllowCredentials();
@@ -33,7 +33,6 @@ builder.Services.AddCors(options =>
 
 
 // Add services to the container.
-builder.Services.AddSignalR();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -44,10 +43,11 @@ builder.Services.AddTransient<EmailSenderService>();
 //builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ISignInLogger, SignInLogger>();
 builder.Services.AddScoped<ISignOutLogger, SignOutLogger>();
-builder.Services.AddHostedService<KeepAliveService>();
+//builder.Services.AddHostedService<KeepAliveService>();
 //builder.Services.AddSwaggerGen(x=>x.ope)
 
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddSignalR();
 
 var app = builder.Build();
 
@@ -59,10 +59,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseStaticFiles();
+app.UseRouting();
 app.UseCors();
 
-app.UseHttpsRedirection();
-
+//app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
