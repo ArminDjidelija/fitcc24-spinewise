@@ -12,7 +12,7 @@ using Microsoft.ML;
 
 namespace SpineWise_Web
 {
-    public partial class MLModelspine
+    public partial class SpinewiseMLModel
     {
         public const string RetrainFilePath =  @"C:\Users\Armin\Downloads\Podaci 23.05.2024. 13-15.csv";
         public const char RetrainSeparatorChar = ',';
@@ -94,9 +94,7 @@ namespace SpineWise_Web
             var pipeline = mlContext.Transforms.Categorical.OneHotEncoding(new []{new InputOutputColumnPair(@"PressureSensor1", @"PressureSensor1"),new InputOutputColumnPair(@"PressureSensor2", @"PressureSensor2"),new InputOutputColumnPair(@"PressureSensor3", @"PressureSensor3"),new InputOutputColumnPair(@"PressureSensor4", @"PressureSensor4")}, outputKind: OneHotEncodingEstimator.OutputKind.Indicator)      
                                     .Append(mlContext.Transforms.ReplaceMissingValues(@"UpperBackDistance", @"UpperBackDistance"))      
                                     .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"PressureSensor1",@"PressureSensor2",@"PressureSensor3",@"PressureSensor4",@"UpperBackDistance"}))      
-                                    .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName:@"Good",inputColumnName:@"Good",addKeyValueAnnotationsAsText:false))      
-                                    .Append(mlContext.MulticlassClassification.Trainers.OneVersusAll(binaryEstimator: mlContext.BinaryClassification.Trainers.SdcaLogisticRegression(new SdcaLogisticRegressionBinaryTrainer.Options(){L1Regularization=0.09432618F,L2Regularization=0.03125F,LabelColumnName=@"Good",FeatureColumnName=@"Features"}), labelColumnName:@"Good"))      
-                                    .Append(mlContext.Transforms.Conversion.MapKeyToValue(outputColumnName:@"PredictedLabel",inputColumnName:@"PredictedLabel"));
+                                    .Append(mlContext.BinaryClassification.Trainers.LbfgsLogisticRegression(new LbfgsLogisticRegressionBinaryTrainer.Options(){L1Regularization=0.08708809F,L2Regularization=0.1479532F,LabelColumnName=@"Good",FeatureColumnName=@"Features"}));
 
             return pipeline;
         }

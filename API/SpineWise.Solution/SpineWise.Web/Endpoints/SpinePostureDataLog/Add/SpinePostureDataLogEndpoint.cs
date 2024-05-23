@@ -32,13 +32,11 @@ namespace SpineWise.Web.Endpoints.SpinePostureDataLog.Add
             //var DatumVrijeme = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow,
             //    TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"));
 
-            //var tool = new AiPredictor();
+            var tool = new AiPredictor();
 
-            //var good = await tool.GetPredictionAsync(request.UpperBackDistance, request.LegDistance,
-            //    (request.PressureSensor1 ? 1.0f : 0.0f),
-            //    (request.PressureSensor2 ? 1.0f : 0.0f),
-            //    (request.PressureSensor3 ? 1.0f : 0.0f)
-            //);
+            var good = await tool.GetPredictionAsync(request.UpperBackDistance, request.LegDistance,
+                   request.PressureSensor1, request.PressureSensor2, request.PressureSensor3, request.PressureSensor4
+            );
 
             var obj = new ClassLibrary.Models.SpinePostureDataLog()
             {
@@ -52,7 +50,7 @@ namespace SpineWise.Web.Endpoints.SpinePostureDataLog.Add
                 ChairId = request.ChairId,
                 //DateTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow,
                 //    TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time")),
-                Good = request.Good
+                Good = good
             };
 
             _applicationDbContext.SpinePostureDataLogs.Add(obj);
@@ -66,28 +64,27 @@ namespace SpineWise.Web.Endpoints.SpinePostureDataLog.Add
 
     public class AiPredictor
     {
-        public async Task<bool> GetPredictionAsync(float up, float leg, float p1, float p2, float p3)
+        public async Task<bool> GetPredictionAsync(float up, float leg, bool p1, bool p2, bool p3, bool p4)
         {
-            // Load sample data
-            var sampleData = new MLModelspine.ModelInput()
+            //Load sample data
+            var sampleData = new SpinewiseMLModel.ModelInput()
             {
                 UpperBackDistance = up,
-                LegDistance = leg,
                 PressureSensor1 = p1,
                 PressureSensor2 = p2,
                 PressureSensor3 = p3,
+                PressureSensor4 = p4,
             };
 
-            // Load model and predict output
-            var result = await Task.Run(() => MLModelspine.Predict(sampleData));
-            var resultBool = false;
-            var podatak = Convert.ToInt32(result.PredictedLabel);
-            if (podatak == 1)
-            {
-                resultBool = true;
-            }
+            //Load model and predict output
+            var result = SpinewiseMLModel.Predict(sampleData);
 
-            return resultBool;
+            var podatak = result.PredictedLabel;
+            //if (podatak == 1)
+            //{
+            //    resultBool = true;
+            //}
+            return podatak;
         }
     }
 }
