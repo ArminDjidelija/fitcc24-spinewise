@@ -24,7 +24,7 @@ builder.Services.AddCors(options =>
     options.AddDefaultPolicy(builder =>
     {
         builder
-            .WithOrigins(new string[] { "https://spinewise.p2361.app.fit.ba", "https://backend.spinewise.p2361.app.fit.ba" })
+            .WithOrigins(new string[] { "https://spinewise.p2361.app.fit.ba", "https://backend.spinewise.p2361.app.fit.ba", "http://localhost:4200" })
             .AllowAnyMethod()
             .AllowAnyHeader()
             .AllowCredentials();
