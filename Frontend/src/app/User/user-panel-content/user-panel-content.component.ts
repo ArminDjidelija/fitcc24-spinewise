@@ -263,7 +263,7 @@ intervalPause=20;
           },
           title: {
             display: true,
-            text: 'Chart.js Doughnut Chart'
+            text: 'Sitting Analysis: Correct vs Incorrect'
           }
         },
       },

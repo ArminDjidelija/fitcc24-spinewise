@@ -6,6 +6,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   background: #fafafa;
+  overflow: hidden;
 }
 
 p {
@@ -63,9 +64,10 @@ span {
 #sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: #3e96cb;
+  background: #6ACEE5;
   color: #fff;
   transition: all 0.3s;
+  padding-left: 0.5%;
 }
 
 #sidebar.active {
@@ -123,9 +125,12 @@ span {
   font-size: 1.8em;
 }
 
+.sidebar-header {
+  background-color: #6ACEE5 !important;
+}
 #sidebar ul.components {
   padding: 20px 0;
-  border-bottom: 1px solid #3e96cb;
+  border-bottom: 1px solid #6ACEE5;
 }
 
 #sidebar ul li a {
@@ -206,6 +211,9 @@ a.article:hover {
 ----------------------------------------------------- */
 
 @media (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
   #sidebar {
     min-width: 80px;
     max-width: 80px;

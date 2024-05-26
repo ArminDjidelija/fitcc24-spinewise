@@ -548,7 +548,9 @@ a.article:hover {
 ----------------------------------------------------- */
 
 @media only screen and (max-width: 855px) {
-
+body {
+  overflow: hidden;
+}
   #content {
     margin-left: 0;
     margin-right: 0;
@@ -814,5 +816,8 @@ a.article:hover {
   .navbar {
     padding-left: 5px;
     padding-right: 5px;
+  }
+  body {
+    overflow: hidden;
   }
 }
