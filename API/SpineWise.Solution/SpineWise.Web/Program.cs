@@ -1,11 +1,9 @@
-
 using Microsoft.EntityFrameworkCore;
 using SpineWise.Web.Data;
 using SpineWise.Web.Helpers.Auth;
 using SpineWise.Web.Helpers.Email_sender;
 using SpineWise.Web.Helpers.Loggers;
 using SpineWise.Web.Services;
-using SpineWise.Web.Services.KeepAlive;
 using SpineWise.Web.Services.SignalR;
 
 var config = new ConfigurationBuilder()

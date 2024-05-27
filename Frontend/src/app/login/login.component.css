@@ -37,6 +37,7 @@ input {
   display: grid;
   grid-template-columns: 1fr;
   z-index: 5;
+  
 }
 
 form {
@@ -332,7 +333,9 @@ form.sign-in-form {
   form {
     padding: 0 1.5rem;
   }
-
+  .signin-signup{
+    margin-top: -50%;
+  }
   .image {
     display: none;
   }

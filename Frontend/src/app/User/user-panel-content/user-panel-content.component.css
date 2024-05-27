@@ -220,6 +220,9 @@ body {
   .charts2 {
     flex-direction: column;
   }
+  .chart-pie{
+    width: 70%;
+  }
 }
 
 /*.heatmap {*/

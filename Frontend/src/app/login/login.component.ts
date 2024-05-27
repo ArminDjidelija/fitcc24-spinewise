@@ -30,7 +30,7 @@ export class LoginComponent {
 
     this.myAuth.signIn(request).subscribe(async x=>{
       if(x.role==="user"){
-        this.router.navigate(["/user"]);
+        this.router.navigate(["/user/dashboard"]);
       }
       else if(x.role==="admin"){
         this.router.navigate(["/s-admin"]);
