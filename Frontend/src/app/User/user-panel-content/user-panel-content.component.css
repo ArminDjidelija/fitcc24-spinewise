@@ -132,7 +132,7 @@ body {
 .left-div {
   width: 100px;
   height: 250px;
-  background-color: lightblue;
+  background-color: red;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,7 +147,7 @@ body {
 .middle-div {
   width: 150px;
   height: 125px;
-  background-color: lightgreen;
+  background-color: red;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,7 +158,7 @@ body {
 .right-div {
   width: 100px;
   height: 250px;
-  background-color: lightcoral;
+  background-color: red;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -33,7 +33,7 @@ export class HomepageComponent implements OnInit{
 
   forward(){
     if(this.role.role==="user"){
-      this.router.navigate(["/user"]);
+      this.router.navigate(["/user/dashboard"]);
     }
     else if(this.role.role==="superadmin"){
       this.router.navigate(["/s-admin"]);

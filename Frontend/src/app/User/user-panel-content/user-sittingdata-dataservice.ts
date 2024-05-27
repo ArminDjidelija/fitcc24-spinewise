@@ -83,6 +83,7 @@ export interface HeatmapData{
   s1Percentage: number
   s2Percentage: number
   s3Percentage: number
+  s4Percentage: number
 }
 
 export interface ChairSittingData{
@@ -93,6 +94,7 @@ export interface ChairSittingData{
   s1Percentage: number
   s2Percentage: number
   s3Percentage: number
+  s4Percentage: number
   datum:Date
 }
 

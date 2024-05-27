@@ -49,12 +49,14 @@ namespace SpineWise.Web.Endpoints.SpinePostureDataLog.SpecificDayData
             var s1 = query.Where(x => x.PressureSensor1).Count();
             var s2 = query.Where(x => x.PressureSensor2).Count();
             var s3 = query.Where(x => x.PressureSensor3).Count();
-            float p1, p2, p3;
+            var s4 = query.Where(x => x.PressureSensor4).Count();
+            float p1, p2, p3, p4;
             if (ukupno > 0)
             {
                 p1 = (float)s1 / ukupno;
                 p2 = (float)s2 / ukupno;
                 p3 = (float)s3 / ukupno;
+                p4 = (float)s4 / ukupno;
             }
             else
             {
@@ -65,6 +67,7 @@ namespace SpineWise.Web.Endpoints.SpinePostureDataLog.SpecificDayData
                     s1Percentage = 0,
                     s2Percentage = 0,
                     s3Percentage = 0,
+                    s4Percentage=0,
                     SittingHours = 0,
                     SittingMinutes=0,
                     Datum=request.Datum
@@ -96,12 +99,14 @@ namespace SpineWise.Web.Endpoints.SpinePostureDataLog.SpecificDayData
                 s1Percentage = p1,
                 s2Percentage = p2,
                 s3Percentage = p3,
+                s4Percentage = p4,
                 Datum=request.Datum,
             };
 
             obj.s1Percentage = (float)Math.Round(obj.s1Percentage, 2)*100f;
             obj.s2Percentage = (float)Math.Round(obj.s2Percentage, 2)*100f;
             obj.s3Percentage = (float)Math.Round(obj.s3Percentage, 2)*100f;
+            obj.s4Percentage = (float)Math.Round(obj.s4Percentage, 2)*100f;
             obj.BadPercentage = (float)Math.Round(obj.BadPercentage, 2);
             obj.GoodPercentage = (float)Math.Round(obj.GoodPercentage, 2);
 

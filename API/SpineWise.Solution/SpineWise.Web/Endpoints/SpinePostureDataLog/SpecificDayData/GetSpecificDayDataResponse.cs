@@ -9,6 +9,7 @@
         public float s1Percentage { get; set; }
         public float s2Percentage { get; set; }
         public float s3Percentage { get; set; }
+        public float s4Percentage { get; set; }
         public DateTime Datum { get; set; }
     }
 }

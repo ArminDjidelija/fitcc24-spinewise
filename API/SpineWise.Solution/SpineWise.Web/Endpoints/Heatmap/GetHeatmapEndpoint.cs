@@ -48,6 +48,7 @@ namespace SpineWise.Web.Endpoints.Heatmap
             var s1 = query.Where(x => x.PressureSensor1).Count();
             var s2 = query.Where(x => x.PressureSensor2).Count();
             var s3 = query.Where(x => x.PressureSensor3).Count();
+            var s4 = query.Where(x => x.PressureSensor4).Count();
             //var s4 = query.Where(x => x.PressureSensor3).Count();
             //var s5 = query.Where(x => x.PressureSensor3).Count();
 
@@ -58,12 +59,14 @@ namespace SpineWise.Web.Endpoints.Heatmap
                 s1Percentage = (float)s1 / ukupnoZapisa,
                 s2Percentage = (float)s2 / ukupnoZapisa,
                 s3Percentage = (float)s3 / ukupnoZapisa,
-                BrojZapisa=ukupnoZapisa
+                s4Percentage = (float)s4 / ukupnoZapisa,
+                BrojZapisa =ukupnoZapisa
             };
 
             response.s1Percentage = (float)Math.Round(response.s1Percentage, 2)*100f;
             response.s2Percentage = (float)Math.Round(response.s2Percentage, 2)*100f;
             response.s3Percentage = (float)Math.Round(response.s3Percentage, 2)*100f;
+            response.s4Percentage = (float)Math.Round(response.s4Percentage, 2)*100f;
 
             return Ok(response);
         }

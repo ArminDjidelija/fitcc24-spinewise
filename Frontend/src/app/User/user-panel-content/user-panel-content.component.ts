@@ -384,6 +384,7 @@ intervalPause=20;
     s1Percentage:0,
     s2Percentage:0,
     s3Percentage:0,
+    s4Percentage:0,
     badPercentage:0,
     goodPercentage:0,
     sittingHours:0,
@@ -396,10 +397,18 @@ intervalPause=20;
     this.dataService.GetSittingData(this.heatMapDate).subscribe(x=>{
       //alert(x.badPercentage+" "+x.goodPercentage+" "+x.s1Percentage+" "+x.s2Percentage+" "+x.s3Percentage);
       this.sjedenje=x;
-      this.drugi.nativeElement.style.backgroundColor=this.getRedColor(175, 255, x.s1Percentage);
-      this.treci.nativeElement.style.backgroundColor=this.getRedColor(175, 255, x.s2Percentage);
-      this.cetvrti.nativeElement.style.backgroundColor=this.getRedColor(175, 255, x.s3Percentage);
-      this.prvi.nativeElement.style.backgroundColor=this.getRedColor(175, 255, x.s3Percentage);
+      // this.drugi.nativeElement.style.backgroundColor=this.getRedColor(175, 255, x.s1Percentage);
+      
+
+      this.prvi.nativeElement.style.backgroundColor=`rgb(220, 0, 0, ${(x.s4Percentage+20)/100})`;
+      this.drugi.nativeElement.style.backgroundColor=`rgb(220, 0, 0, ${(x.s3Percentage+20)/100})`;
+      this.treci.nativeElement.style.backgroundColor=`rgb(220, 0, 0, ${(x.s1Percentage+20)/100})`;
+      this.cetvrti.nativeElement.style.backgroundColor=`rgb(220, 0, 0, ${(x.s4Percentage+20)/100})`;
+      
+
+      // this.treci.nativeElement.style.backgroundColor=this.getRedColor(175, 255, x.s2Percentage);
+      // this.cetvrti.nativeElement.style.backgroundColor=this.getRedColor(175, 255, x.s3Percentage);
+      // this.prvi.nativeElement.style.backgroundColor=this.getRedColor(175, 255, x.s3Percentage);
 
       this.pieChart={
         labels:["Good %", "Bad %"],
@@ -417,7 +426,9 @@ intervalPause=20;
     var rgbRacun=min+(max-min)*procenat/100;
     return `rgb(${rgbRacun}, 0, 0)`;
   }
-
+  getRedColorTranparency(percentage=50){
+    var ukupno=255
+  }
 counter=0;
   isred=false;
   iswhite=false;
