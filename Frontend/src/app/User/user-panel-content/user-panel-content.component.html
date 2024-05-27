@@ -1,29 +1,69 @@
-<div style="margin-bottom: 60px;height: 100px;width: 100%;text-align: center;font-size: xx-large; display: flex;
+ <!-- Font Awesome JS -->
+ <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+ <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+ <div class="datum">
+  <div class="date">{{sjedenje.datum | date}}.</div> 
+  <div class="picker"><input class="dtpicker" type="date" (change)="ChairHeatmap();ChairSittingData();GetDayDistribution();" name="" id="" [(ngModel)]="heatMapDate"></div>
+ </div>
+
+<div class="main-info">
+  <div >
+    <i class="fa fa-clock-o"></i><div class="info-part"> Total Sitting Time: {{sjedenje.sittingHours}} hours : {{sjedenje.sittingMinutes}} minutes</div> 
+  </div>
+ <i class="fa fa-percent "></i> <div class="info-part" > Correct Sitting Percentage: {{sjedenje.goodPercentage}}%</div>
+  <div>
+</div>
+<div class="aipart">
+  
+  <div style="margin-bottom: 60px;height: 100px;width: 100%;text-align: center;font-size: xx-large; display: flex;
    margin: auto;" *ngIf="warningShow" [ngClass]="{'red':isred}">Wrong posture, {{procenatLast5}}% of time in last minute your posture was in unhealthy position</div>
 
-<p >
-  {{aiResponse}}
-</p>
+  <div class="spino">
+    <div class="spinoimg"><img class="spinoslika" src="assets/user-panel/spinofinds.gif"></div>
+    <div class="airesponse">
+      <h3>Hello! Here is your Spinal Insight: </h3>
+    <p>
+      {{aiResponse}}
+    </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="charts-section">
 
 <div class="row">
   <div class="col-lg-3">
-    <div >Datum: {{sjedenje.datum | date}}</div>
-    <div >
-      Vrijeme sjedenja: {{sjedenje.sittingHours}} sati i {{sjedenje.sittingMinutes}} minuta
-    </div>
-    <div >Ispravan procenat sjedenja: {{sjedenje.goodPercentage}}%</div>
-    <div>
-      <input type="date" (change)="ChairHeatmap();ChairSittingData();GetDayDistribution();" name="" id="" [(ngModel)]="heatMapDate">
+      
     </div>
   </div>
-  <div class="col-lg-9">
+  <div class="col-lg-9 charts">
 <!--    <h5>Raspodjela sjedenja po danu:</h5>-->
-    <div class="chart">
-      <canvas id="dan"></canvas>
-    </div>
-    <div class="chart">
+      <div class="chart">
+        <canvas id="dan"></canvas>
+      </div> 
+      <div class="chart-pie">
+    <canvas id="piechart"></canvas>
+     </div>
+  </div>
+ 
+<div class="charts2">
+     <div class="chart">
       <canvas id="wrongposture"></canvas>
+    </div> 
+
+    <div class="distribution-chart">
+      <div><h5>Weight Distribution</h5></div>
+    <div class="container">
+      <div #prvi class="left-div">{{sjedenje.s3Percentage}}%</div>
+      <div class="middle-container">
+        <div #drugi class="middle-div">{{sjedenje.s1Percentage}}%</div>
+        <div #treci class="middle-div">{{sjedenje.s2Percentage}}%</div>
+      </div>
+      <div #cetvrti class="right-div">{{sjedenje.s3Percentage}}%</div>
     </div>
+  </div>
   </div>
 <!--  <div class="col-lg-4"></div>-->
 <!--  <div class="col-lg-4"></div>-->
@@ -31,9 +71,9 @@
 <hr>
 <div class="row">
 
-  <div class="col-lg-6">
-    <h5>Vrijeme sjedenja zadnjih 5 zabilježenih dana:</h5>
-    <div class="chart">
+  <div class="charts3">
+   <div class="vrijemehdr"> <h5 class="vrijemetxt">Sitting time for the last 5 days:</h5></div>
+    <div class="chart sittingtimechart">
       <canvas id="vrijeme"></canvas>
     </div>
   </div>
@@ -45,14 +85,12 @@
 <!--  </div>-->
 </div>
 
-<div class="chart">
-  <canvas id="piechart"></canvas>
-</div>
 
 
 <div>
   <p [(ngModel)]="heatMapObject"></p>
 </div>
+
 
 <!--<div class="heatmap">-->
 <!--  Heatmap sjedenja:-->
@@ -66,15 +104,9 @@
 <!--  <div #peti class="peti">{{777}}</div>-->
 <!--</div>-->
 
-<div class="container">
-  <div #prvi class="left-div">{{sjedenje.s3Percentage}}%</div>
-  <div class="middle-container">
-    <div #drugi class="middle-div">{{sjedenje.s1Percentage}}%</div>
-    <div #treci class="middle-div">{{sjedenje.s2Percentage}}%</div>
-  </div>
-  <div #cetvrti class="right-div">{{sjedenje.s3Percentage}}%</div>
-</div>
+
 
 <!--<div class="chart">-->
 <!--  <canvas id="goodbad"></canvas>-->
 <!--</div>-->
+</div>

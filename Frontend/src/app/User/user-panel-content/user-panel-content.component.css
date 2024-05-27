@@ -1,9 +1,97 @@
+.date {
+  font-size: xx-large;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  color: #6ACEE5;
+}
+.col-lg-9 {
+  width: 100%;
+}
+.datum {
+  display: flex;
+  margin-bottom: 3%;
+}
+.chart-pie {
+  width: 45%;
+}
+#piechart {
+  width: auto !important;
+}
+.first-charts {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.vrijemehdr {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.charts {
+  display: flex;
+  justify-content:space-around;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.info-part {
+  display: inline;
+  font-size: large;
+}
 .chart{
   height: 300px;
   width: 100%;
 }
 canvas{
   width:100%;
+}
+body {
+  overflow: hidden;
+}
+.spino {
+  display: flex;
+}
+.airesponse {
+  border: 1px solid #6ACEE5;
+  border-radius: 20px;
+  padding: 30px;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.charts2 {
+  margin-top: 7%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.container {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.charts-section {
+  text-align: center;
+}
+.fa-clock-o {
+  color: #6ACEE5;
+}
+.fa-percent {
+  color: #6ACEE5;
+}
+.vrijemetxt {
+  text-align: center;
+}
+.sittingtimechart {
+  margin-left: auto;
+  margin-right: auto;
+}
+#vrijeme {
+  margin-left: auto;
+  margin-right: auto;
 }
 /*@media (max-width: 1250px) {*/
 /*  .chart{*/
@@ -77,6 +165,62 @@ canvas{
   text-align: center;
 }
 
+@media only screen and (max-width: 855px) {
+  body {
+    overflow: hidden;
+  }
+  .datum {
+    justify-content: space-between ;
+  }
+  .date {
+    font-size: x-large;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .picker {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .info-part {
+    font-size: medium;
+  }
+  .spinoimg {
+    width: 35%;
+  }
+  .btn-dark {
+    display: none;
+  }
+  .spinoslika {
+    width: 100%;
+  }
+  .aipart {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .airesponse {
+    max-width: 65%;
+    padding: 2%;
+  }
+  .airesponse h3 {
+    font-size: medium;
+  }
+  .airesponse p {
+    font-size: small;
+  }
+  #content {
+    padding: 1% !important;
+  }
+  .charts {
+    flex-direction: column;
+  }
+  .charts2 {
+    flex-direction: column;
+  }
+}
 
 /*.heatmap {*/
 /*}*/
