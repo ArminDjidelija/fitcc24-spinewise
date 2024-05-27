@@ -142,7 +142,9 @@ span {
 #sidebar ul li a i {
   margin-right: 10px;
 }
-
+#sidebarCollapse1{
+  display:none;
+}
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
   color: #fff;
@@ -222,6 +224,20 @@ a.article:hover {
   }
   #sidebar.active {
     margin-left: 0 !important;
+    /*dodano*/
+    min-width: 100%;
+    max-width: 100%;
+    position:fixed;
+    height:100%;
+    z-index:9999;
+  }
+  #sidebar.off{
+    display:none;
+  }
+  #sidebarCollapse1{
+    display:block;
+    float: left;
+    position:fixed;
   }
   #sidebar .sidebar-header h3,
   #sidebar .CTAs {
