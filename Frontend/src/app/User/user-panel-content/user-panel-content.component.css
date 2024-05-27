@@ -165,6 +165,62 @@ body {
   text-align: center;
 }
 
+@media only screen and (max-width: 855px) {
+  body {
+    overflow: hidden;
+  }
+  .datum {
+    justify-content: space-between ;
+  }
+  .date {
+    font-size: x-large;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .picker {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .info-part {
+    font-size: medium;
+  }
+  .spinoimg {
+    width: 35%;
+  }
+  .btn-dark {
+    display: none;
+  }
+  .spinoslika {
+    width: 100%;
+  }
+  .aipart {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .airesponse {
+    max-width: 65%;
+    padding: 2%;
+  }
+  .airesponse h3 {
+    font-size: medium;
+  }
+  .airesponse p {
+    font-size: small;
+  }
+  #content {
+    padding: 1% !important;
+  }
+  .charts {
+    flex-direction: column;
+  }
+  .charts2 {
+    flex-direction: column;
+  }
+}
 
 /*.heatmap {*/
 /*}*/
