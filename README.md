@@ -40,7 +40,7 @@ Za softver smo koristili:
 
 
 ### Stolica i sve komponente
-Tokom sjedenja na stolici, mikrokontroler prikuplja podatke od senzora, analizira ih i potom šalje na web server putem WiFi-a. Na serveru se, putem već istreniranog ML algoritma kreiranog putem ML.NET-a, ti podaci o sjedenju klasificiraju kao dobri ili loši, odnosno da li je sjedenje ispravno ili ne. Poslije toga se korisniku automatski na web stranici učitavaju podaci, kao i upozorenje ukoliko korisnik konstantno sjedi neispravno u zadnjih nekoliko minuta.
+Tokom sjedenja na stolici, mikrokontroler prikuplja podatke od senzora, analizira ih i potom šalje na web server putem WiFi-a. Na serveru se, putem već istreniranog ML algoritma kreiranog putem ML.NET-a, ti podaci o sjedenju klasificiraju. Poslije toga se korisniku automatski na web stranici učitavaju podaci, kao i upozorenje ukoliko korisnik konstantno sjedi neispravno u zadnjih nekoliko minuta. Također, korisnik dobija i personalizovan AI poruku u kojoj su navedene informacije o sjedenju, te preporuke kako bi korisnik trebao da poboljša svoje sjedenje.
 
 ---
 
