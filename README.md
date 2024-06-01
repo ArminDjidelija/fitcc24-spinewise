@@ -2,7 +2,7 @@
  ![4](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/d64ccbef-1b92-4216-9100-e373ac3cdc5b)
 
 ## Prezentacija
-[Kliknite ovdje za prezentaciju](https://bit.ly/spinewise-fitcc-prezentacija)
+[Kliknite ovdje da pogledate prezentaciju](https://bit.ly/spinewise-fitcc-prezentacija)
 
 ## O projektu
 
@@ -32,6 +32,8 @@ Spinewise pametna stolica se sastoji od:
 ### Softver
 Za softver smo koristili: 
 - **ASP.NET Core Web API**
+- **ML.NET**
+- **GPT-3.5 Turbo model**
 - **MS SQL Server**
 - **Angular**
 - **HTML, CSS, JS**
@@ -70,4 +72,7 @@ Tokom sjedenja na stolici, mikrokontroler prikuplja podatke od senzora, analizir
 
 ### Video demonstracija
 https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/1031e182-d877-4a2c-9460-2384a5cc3189
+
+# Zaključak 
+Spinewise pametna stolica prati sjedenje i daje detaljne informacije korisniku o njegovom načinu sjedenja. Samim tim, pomaže korisniku da poboljša svoje zdravlje leđa i kičme, ali i cjelokupno zdravlje. Pravilno sjedenje je ključno za održavanje zdrave kralježnice, a Spinewise je vaš partner na tom putu. Pomoću integriranih senzora i intuitivne aplikacije, možete nadzirati svoje sjedenje u stvarnom vremenu i dobiti korisne povratne informacije. Ovaj proizvod je dizajniran da bude pristupačan i koristan široj publici, podržavajući tako svakoga ko cijeni brigu o vlastitom zdravlju. 
 
