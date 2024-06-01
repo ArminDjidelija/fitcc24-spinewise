@@ -1,6 +1,8 @@
 # Spinewise smart chair - FIT Coding Challenge 2024
  ![4](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/d64ccbef-1b92-4216-9100-e373ac3cdc5b)
 
+# Spinewise Pametna Stolica
+
 ## Prezentacija
 [Kliknite ovdje za prezentaciju](https://bit.ly/spinewise-fitcc-prezentacija)
 
@@ -37,7 +39,7 @@ Za softver smo koristili:
 - **HTML, CSS, JS**
 
 
-### Funkcionisanje
+### Stolica i sve komponente
 Tokom sjedenja na stolici, mikrokontroler prikuplja podatke od senzora, analizira ih i potom šalje na web server putem WiFi-a. Na serveru se, putem već istreniranog ML algoritma kreiranog putem ML.NET-a, ti podaci o sjedenju klasificiraju kao dobri ili loši, odnosno da li je sjedenje ispravno ili ne. Poslije toga se korisniku automatski na web stranici učitavaju podaci, kao i upozorenje ukoliko korisnik konstantno sjedi neispravno u zadnjih nekoliko minuta.
 
 ---
@@ -51,15 +53,23 @@ Tokom sjedenja na stolici, mikrokontroler prikuplja podatke od senzora, analizir
 ## Spinewise tim
 ![14](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/04b21102-f2b7-40a6-a177-3490deb231bd)
 
+# UI
+## Homepage
+![image](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/2d93e71b-85d3-4f47-abd0-6403ef8ab84f)
+![image](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/919faa7b-24b0-43dc-903b-bb0429c7ca42)
+![image](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/4f103531-0197-453d-8d7f-797aee2599d7)
+## Sign in
+![image](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/27d0f158-09d2-4e85-83ce-f11f2a698cdf)
+## User dashboard
+![image](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/d494956f-4766-452e-9ee1-739481765f81)
+![image](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/09fc4972-cdab-4669-a013-b4fe786597e3)
+![image](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/75989ca4-ff87-4723-a312-1463508e8107)
+## User chairs
+![image](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/80e244e0-4d23-4622-b139-394cf7b1055e)
+## User profile
+![image](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/2adef965-6e49-47d4-b533-eebf3bf2141e)
+
+
 ### Video demonstracija
 https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/1031e182-d877-4a2c-9460-2384a5cc3189
-
-## Pristupni podaci
-Naša stranica se nalazi na domeni: https://spinewise.p2361.app.fit.ba/ <br>
-Pristupni podaci za korisnika su: <br>
- - Email: user@spinewise.com <br>
- - Lozinka: spinewisesifra123+-! 
- 
- 
-
 
