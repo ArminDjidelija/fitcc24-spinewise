@@ -1,8 +1,6 @@
 # Spinewise smart chair - FIT Coding Challenge 2024
  ![4](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/d64ccbef-1b92-4216-9100-e373ac3cdc5b)
 
-# Spinewise Pametna Stolica
-
 ## Prezentacija
 [Kliknite ovdje za prezentaciju](https://bit.ly/spinewise-fitcc-prezentacija)
 
