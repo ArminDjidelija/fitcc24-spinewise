@@ -46,13 +46,20 @@ Tokom sjedenja na stolici, mikrokontroler prikuplja podatke od senzora, analizir
 
 ## Tržište
 ![10](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/8c4f2ee6-5acd-480e-ae0c-7952d4a77f7b)
+Stolice su neizostavan dio našeg svakodnevnog života. Bez obzira na to da li radimo, učimo, jedemo ili se odmaramo, stolice su tu da nam pruže udobnost i podršku. Gotovo svaka osoba posjeduje jednu ili više stolica u svom domu ili radnom prostoru, što čini tržište stolice izuzetno velikim i značajnim. Svjetsko tržište stolica, koje je ogromno, se očekuje da će rasti oko 10% narednih nekoliko godina. Jasno je da uređaj kao što je Spinewise pametna stolica ima veliki potencijal u ovakvom tržištu. 
 ## Pismo preporuke od EIT-a (Evropski institut za inovacije i tehnologiju)
 ![11](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/6772ab7e-ddb5-456f-8798-eeca0d7869ef)
+Zahvaljujemo se EIT-u (Evropski institut za inovacije i tehnologiju) na pismu preporuke koje su nam napisali. Ponosni smo što smo dio zajednice koja prepoznaje i nagrađuje izvrsnost u tehnologiji i inovacijama.
 ## Ciljna publika 
 ![12](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/5182ed73-fb8c-4178-ace1-9b5a0e504906)
+Kao što je rečeno u opisu tržišta za Spinewise pametnu stolicu, zaključujemo da bi ovakav uređaj bio potreban velikoj narodnoj masi. U fokus ćemo stavii osobe starosti od 25 do 55 godina, odnosno one osobe koje već provode veliku količinu vremena sjedeći na stolici. Također, ne isključujemo ni ostale grupe, odnosno one mlađe od 25 godina i one starije od 55 godina, koji bi također mogli da koriste Spinewise pametnu stolicu.  
 ## Spinewise tim
 ![14](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/04b21102-f2b7-40a6-a177-3490deb231bd)
-
+Spinewise tim su studenti Fakulteta informacijskih tehnologija u Mostaru ([Web stranica fakulteta](https://fit.ba)). Tim čine:
+- **Danis Mušić**
+- **Harun Šafro**
+- **Dino Burić**
+- **Armin Đidelija**
 # UI
 ## Homepage
 ![image](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/2d93e71b-85d3-4f47-abd0-6403ef8ab84f)
