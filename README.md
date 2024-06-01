@@ -55,7 +55,7 @@ Zahvaljujemo se EIT-u (Evropski institut za inovacije i tehnologiju) na pismu pr
 Kao što je rečeno u opisu tržišta za Spinewise pametnu stolicu, zaključujemo da bi ovakav uređaj bio potreban velikoj narodnoj masi. U fokus ćemo stavii osobe starosti od 25 do 55 godina, odnosno one osobe koje već provode veliku količinu vremena sjedeći na stolici. Također, ne isključujemo ni ostale grupe, odnosno one mlađe od 25 godina i one starije od 55 godina, koji bi također mogli da koriste Spinewise pametnu stolicu.  
 ## Spinewise tim
 ![14](https://github.com/ArminDjidelija/fitcc24-spinewise/assets/110191710/04b21102-f2b7-40a6-a177-3490deb231bd)
-Spinewise tim su studenti Fakulteta informacijskih tehnologija u Mostaru ([Web stranica fakulteta](https://fit.ba)). Tim čine:
+Spinewise tim su studenti Fakulteta informacijskih tehnologija u Mostaru ([web stranica fakulteta](https://fit.ba)). Tim čine:
 - **Danis Mušić**
 - **Harun Šafro**
 - **Dino Burić**
