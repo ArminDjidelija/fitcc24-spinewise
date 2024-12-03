@@ -21,10 +21,16 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              {
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
+              },
               "src/assets/spinewise.ico",
               "src/assets",
               "src/SpineWise_User_Manual.pdf",
-              "src/web.config"
+              "src/web.config",
+              "src/netlify.toml"
             ],
             "styles": [
               "src/styles.css"
