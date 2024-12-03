@@ -58,6 +58,7 @@ export class UserPanelContentComponent implements OnInit{
       this.getLastDays();
       this.getGoodBadRatio();
       this.ChairHeatmap();
+      this.getWarning();
     })
   }
 
@@ -353,7 +354,7 @@ intervalPause=20;
   procenatLast5=0;
 
 
-  private getWarning(){
+  public getWarning(){
     //this.getAiReponse();
     this.dataService.GetWarning().subscribe(x=>{
     this.warningobj=x;
@@ -398,13 +399,13 @@ intervalPause=20;
       //alert(x.badPercentage+" "+x.goodPercentage+" "+x.s1Percentage+" "+x.s2Percentage+" "+x.s3Percentage);
       this.sjedenje=x;
       // this.drugi.nativeElement.style.backgroundColor=this.getRedColor(175, 255, x.s1Percentage);
-      
+
 
       this.prvi.nativeElement.style.backgroundColor=`rgb(220, 0, 0, ${(x.s4Percentage+20)/100})`;
       this.drugi.nativeElement.style.backgroundColor=`rgb(220, 0, 0, ${(x.s3Percentage+20)/100})`;
       this.treci.nativeElement.style.backgroundColor=`rgb(220, 0, 0, ${(x.s1Percentage+20)/100})`;
       this.cetvrti.nativeElement.style.backgroundColor=`rgb(220, 0, 0, ${(x.s4Percentage+20)/100})`;
-      
+
 
       // this.treci.nativeElement.style.backgroundColor=this.getRedColor(175, 255, x.s2Percentage);
       // this.cetvrti.nativeElement.style.backgroundColor=this.getRedColor(175, 255, x.s3Percentage);
@@ -432,7 +433,7 @@ intervalPause=20;
 counter=0;
   isred=false;
   iswhite=false;
-  async activateWarning(){
+  public async activateWarning(){
 
     await this.executeWithDelay(1000, true);
     await this.executeWithDelay(1000, false);

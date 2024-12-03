@@ -3,19 +3,19 @@
  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
  <div class="datum">
-  <div class="date">{{sjedenje.datum | date}}.</div> 
-  <div class="picker"><input class="dtpicker" type="date" (change)="ChairHeatmap();ChairSittingData();GetDayDistribution();" name="" id="" [(ngModel)]="heatMapDate"></div>
+  <div class="date">{{sjedenje.datum | date}}.</div>
+  <div class="picker"><input class="dtpicker" type="date" (change)="ChairHeatmap();ChairSittingData();GetDayDistribution();getWarning();" name="" id="" [(ngModel)]="heatMapDate"></div>
  </div>
 
 <div class="main-info">
   <div >
-    <i class="fa fa-clock-o"></i><div class="info-part"> Total Sitting Time: {{sjedenje.sittingHours}} hours : {{sjedenje.sittingMinutes}} minutes</div> 
+    <i class="fa fa-clock-o"></i><div class="info-part"> Total Sitting Time: {{sjedenje.sittingHours}} hours : {{sjedenje.sittingMinutes}} minutes</div>
   </div>
  <i class="fa fa-percent "></i> <div class="info-part" > Correct Sitting Percentage: {{sjedenje.goodPercentage}}%</div>
   <div>
 </div>
 <div class="aipart">
-  
+
   <div style="margin-bottom: 60px;height: 100px;width: 100%;text-align: center;font-size: xx-large; display: flex;
    margin: auto;" *ngIf="warningShow" [ngClass]="{'red':isred}">Wrong posture, {{procenatLast5}}% of time in last minute your posture was in unhealthy position</div>
 
@@ -35,23 +35,23 @@
 
 <div class="row">
   <div class="col-lg-3">
-      
+
     </div>
   </div>
   <div class="col-lg-9 charts">
 <!--    <h5>Raspodjela sjedenja po danu:</h5>-->
       <div class="chart">
         <canvas id="dan"></canvas>
-      </div> 
+      </div>
       <div class="chart-pie">
     <canvas id="piechart"></canvas>
      </div>
   </div>
- 
+
 <div class="charts2">
      <div class="chart">
       <canvas id="wrongposture"></canvas>
-    </div> 
+    </div>
 
     <div class="distribution-chart">
       <div><h5>Weight Distribution</h5></div>
