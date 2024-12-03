@@ -69,7 +69,7 @@ void rotaryEncoder();
 void calculateDistances();
 const char* ssid = "spinewise";
 const char* password = "spinewise1";
-const char* server = "https://backend.spinewise.p2361.app.fit.ba/sensordata/log";
+const char* server = "https://spinewise.runasp.net/sensordata/log";
 String key = "";
 int chairId = 8;
 void setup() {
